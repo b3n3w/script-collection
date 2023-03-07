@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  file_handler:
+    build: .
+    image: transcoding-handler:latest
+    container_name: transcoding-handler
+    env_file:
+      - .env
+    volumes:
+      - :/app/files # ADD SOURCE DIR
+      - :/tmp_folder # ADD TMP DIR

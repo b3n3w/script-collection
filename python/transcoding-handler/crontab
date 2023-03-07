@@ -1,0 +1,5 @@
+
+# Run upload every 8 hours
+0 */8 * * * cd /app && /usr/local/bin/python3.10 /app/src/upload.py > /tmp/stdout 2> /tmp/stderr
+*/15 * * * * cd /app && /usr/local/bin/python3.10 /app/src/download.py > /tmp/stdout 2> /tmp/stderr
+# Run download every 15 minutes
